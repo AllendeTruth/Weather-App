@@ -24,14 +24,22 @@ if (navigator.geolocation) {
         var cityName = weatherData.name;
         var country = weatherData.sys.country;
         var description = weatherData.weather[0].description;
-        $('#data').append("The weather in " + cityName + ", "+ country + " is "+ description + ".");
+        var celcius = Math.round(weatherData.main.temp) - 273;
+        var far = (celcius *1.8)+32;
+        $('#data').append("The weather in " + cityName + ", "+ country + " is "+ far +" degrees and "+ description + ".");
         console.log(weatherData);
         } 
     });
 };
 
 
+//////////////Temperature Conversion/////////////////
 
+/// c= k-273
+
+// var celcius = weatherData.main.temp - 273;
+
+// var Far = (celcius *1.8)+32;
 
 
 
