@@ -1,30 +1,66 @@
-///////////////API Call///////////////
+///////////////////////Weather App V2.0///////////////////////////
+// Gets weather info using geolocation
 
 
 
 
-function getWeather(){
-    $("#data").html('');
-    var cityName = $('#cityName').val();
-    var apiCall = `https://api.openweathermap.org/data/2.5/weather?q=`  + cityName + `&appid=ba9912bc30525e697d01aaacaa00c2a4`;
-    
-    $.getJSON(apiCall, weatherCallBack);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///////////////Weather App V1.0///////////////
+
+//App get's city name from form input and displays small amount of info from weather api. 
+
+
+// function getWeather(){
+//     // resets html;
+//     $("#data").html('');
+//     // Name that went in input
+//     var cityName = $('#cityName').val();
+//     // api address + var cityName in appropriate place
+//     var apiCall = `https://api.openweathermap.org/data/2.5/weather?q=`  + cityName + `&appid=ba9912bc30525e697d01aaacaa00c2a4`;
+//     // Api function get's weather data and appends to html forming sentence about weather.
+//     $.getJSON(apiCall, weatherCallBack);
    
-    function weatherCallBack(weatherData){
-        var cityName = weatherData.name;
-        var country = weatherData.sys.country;
-        var description = weatherData.weather[0].description;
-        $('#data').append("The weather in " + cityName + ", "+ country + " is "+ description + ".");
-    }
+//     function weatherCallBack(weatherData){
+//         var cityName = weatherData.name;
+//         var country = weatherData.sys.country;
+//         var description = weatherData.weather[0].description;
+//         $('#data').append("The weather in " + cityName + ", "+ country + " is "+ description + ".");
+//     }
     
-    // console.log(weatherData);
-    // console.log(weatherData.name, weatherData.sys.country, weatherData.weather[0].description);
-} ;
+//     // console.log(weatherData);
+//     // console.log(weatherData.name, weatherData.sys.country, weatherData.weather[0].description);
+// } ;
 
-
+////////////////////////////////////////////////////////////
 
 ///////////////GEOLOCATION///////////////
-var txtDisplayLatLon = document.querySelector("#data")
+// var txtDisplayLatLon = document.querySelector("#data")
 
 
 // if (navigator.geolocation) {
